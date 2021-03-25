@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/barfiller.css">
+    <link rel="stylesheet" href="css/metisMenu.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+
+    <title>登录</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .wrapper {
+            background-image: url('./img/bg/banner-bg-02.jpg');
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+        }
+        
+        @media all and (max-width:1200px) {
+            .loin_table {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                width: 300px;
+                height: 350px;
+                border-radius: 10px;
+                background: #fff;
+                margin-left: -150px;
+                margin-top: -230px;
+                padding: 20px;
+            }
+        }
+        
+        @media all and (min-width:1201px) {
+            .loin_table {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                width: 400px;
+                height: 350pxz;
+                border-radius: 10px;
+                background: #fff;
+                margin-left: -200px;
+                margin-top: -230px;
+                padding: 20px;
+            }
+        }
+        
+        .header {
+            color: #1b2026;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            font-family: 'DM Sans', sans-serif;
+            margin-bottom: 20px;
+        }
+        
+        .send {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .send>div {
+            cursor: pointer;
+        }
+        
+        .display {
+            display: none;
+        }
+        
+        .notice {
+            position: fixed;
+            top: 200px;
+            width: 300px;
+            left: 50%;
+            margin-left: -150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="loin_table">
+            <div class="header">登录</div>
+            <!-- <div style="margin-bottom: 20px;">
+
+                <div class="contact-input">
+                    <input style="border: 1px solid rgba(0, 0, 0, 0.3);border-radius: 10px;" type="email" placeholder="邮箱">
+                    <i class="ti-email"></i>
+                </div>
+            </div> -->
+            <div style="margin-bottom: 20px;">
+
+                <div class="contact-input">
+                    <input id="phonenum" style="border: 1px solid rgba(0, 0, 0, 0.3);border-radius: 10px;" placeholder="手机号码">
+                    <i class="ti-mobile"></i>
+                </div>
+            </div>
+            <div style="margin-bottom: 20px;">
+
+                <div class="contact-input">
+                    <input style="border: 1px solid rgba(0, 0, 0, 0.3);border-radius: 10px;" id="code" placeholder="验证码">
+                    <i class="innertime" style="cursor: pointer;font-style: normal;">获取验证码</i>
+                    <i class="time display" style="cursor: pointer;font-style: normal;">60s</i>
+                </div>
+            </div>
+            <div class="send">
+                <div class="thm-btn login_in">登录</div>
+            </div>
+        </div>
+    </div>
+    <div class="notice"></div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="./js/login.js"></script>
+
+</body>
+
+</html>
