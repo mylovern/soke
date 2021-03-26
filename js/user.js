@@ -1,5 +1,7 @@
 $(document).ready(function() {
     var baseurl = 'https://www.soke.network/api/'
+        // var baseurl = 'http://192.168.101.26:8600/'
+
 
     if (localStorage.getItem('token')) {
         $.ajax({
@@ -79,6 +81,37 @@ $(document).ready(function() {
                 }, 2500)
             }
 
+        })
+    })
+    $('.logout').click(() => {
+        $.ajax({
+            url: baseurl + 'auth/logout',
+            type: 'POST',
+            headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('token'),
+                Accept: "application/json; charset=utf-8",
+            },
+            success: function(res) {
+                console.log(res)
+                if (res.code == 200) {
+                    $('.slide-bar').hide()
+                    $('.body-overlay').hide()
+                    $('.notice').html(
+                        `
+                    <div class="alert alert-success" role="alert">退出成功</div>  
+                    
+                    `
+                    )
+                    setTimeout(() => {
+                        $('.notice').html('')
+                        location.href = '../index.html'
+                        localStorage.removeItem('token')
+                    }, 1500)
+                }
+            },
+            error: function(err) {
+                console.log(err)
+            }
         })
     })
 

@@ -1,4 +1,6 @@
 var baseurl = 'https://www.soke.network/api/'
+    // var baseurl = 'http://192.168.101.26:8600/'
+
 if (localStorage.getItem('token')) {
     window.location.href = '../userinfo.html'
 }
